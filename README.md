@@ -20,6 +20,9 @@ This repos sole purpose is for a reference.
 Pythons current version, at the time of writing is 3.14, however, most code here, unless otherwise stated,
 should be 3.12 compatible.
 
-This repo will feature little to no AI generated code.
+This repo will feature little to no AI generated code,
+however AI may be used to generate the documentation, comments, docstrings,
+planning documents, github issues, etc. Although even then, this will be intentionally limited
+due to current models low quality and sycophancy.
 On the occasion that ai code is used, every single line was reviewed by me.
 This will not be a slop project of everything under the sun.
