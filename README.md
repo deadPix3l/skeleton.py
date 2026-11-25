@@ -20,6 +20,10 @@ This repos sole purpose is for a reference.
 Pythons current version, at the time of writing is 3.14, however, most code here, unless otherwise stated,
 should be 3.12 compatible.
 
+Python is a dynamic language, and type hinting is not required, but extremely encouraged.
+All code in this repo should be type hinted if possible, unless it would make the code less clear.
+If you find untyped code, and you believe typing it would not harm clarity, please open an issue.
+
 This repo will feature little to no AI generated code,
 however AI may be used to generate the documentation, comments, docstrings,
 planning documents, github issues, etc. Although even then, this will be intentionally limited
