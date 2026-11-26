@@ -21,7 +21,7 @@ def collecting[T](func: Callable[..., Iterable[T]]) -> Callable[..., list[T]]:
     can be further simplified to `yield from items`
 
     WARNING: this function will attempt to materialize infinite iterators
-    It is your responsibililty to prevent this.
+    It is your responsibility to prevent this.
     If you do not, you WILL run out of memory and crash.
     """
     @wraps(func)
