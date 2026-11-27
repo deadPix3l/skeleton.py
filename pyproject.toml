@@ -166,6 +166,13 @@ functional = [
   "returns",  # Result/Maybe monads
 ]
 
+caching = [
+  "redis",
+  "diskcache",
+  "cachetools",
+  "aiocache",
+]
+
 #[project.scripts]
 #templatecli = "template.main:cli" # rename this
 
