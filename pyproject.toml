@@ -233,6 +233,14 @@ distributed = [
   "dask",
 ]
 
+shell = [
+  "sh",
+  "plumbum",
+  "invoke",   # task runner
+  "fabric",   # remote SSH tasks
+  "paramiko", # SSH protocol
+]
+
 #[project.scripts]
 #templatecli = "template.main:cli" # rename this
 
