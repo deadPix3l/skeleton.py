@@ -115,6 +115,16 @@ http = [
   "requests",
 ]
 
+scraping = [
+  "beautifulsoup4",
+  "lxml",      # fast parser, also used standalone
+  "scrapy",    # full crawl framework
+  "playwright", # browser automation
+  "selenium",
+  "pyquery",   # jQuery-like selectors
+  "mechanize", # stateful browsing
+]
+
 serialization = [
   "orjson",    # fast JSON
   "msgspec",   # fast JSON + msgpack + struct validation
