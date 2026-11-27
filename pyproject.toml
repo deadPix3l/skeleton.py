@@ -258,6 +258,11 @@ openapi = [
   "schemathesis",  # property-based API testing
 ]
 
+yaml = [
+  "pyyaml",
+  "ruamel.yaml",  # round-trip YAML, preserves comments
+]
+
 #[project.scripts]
 #templatecli = "template.main:cli" # rename this
 
