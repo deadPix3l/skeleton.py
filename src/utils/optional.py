@@ -1,9 +1,6 @@
 from pkgutil import resolve_name
 import logging
 
-def _no_op(*args, **kwargs) -> None:
-    return None
-
 def prefer(*import_strs: str, warn: bool = True):
     """
     decorate shims for optional imports.
@@ -12,7 +9,7 @@ def prefer(*import_strs: str, warn: bool = True):
     just build the shim, and this decorator will swap out the
     official version if available
     """
-    def decorator[T](shim: T = _no_op) -> T | Any:
+    def decorator[T](shim: T = lambda *args, **kwargs: None) -> T | Any:
         for import_str in import_strs:
             try:
                 return resolve_name(import_str)
@@ -37,7 +34,7 @@ Examples:
 ...     def __call__(*args, **kwargs):
 ...         pass
 
-# no shim needed, default shim is _no_op(),
+# no shim needed, default shim is a no-op,
 # but json:dumps is stdlib and will always resolve
->>> dumps = prefer("orjson:dumps", "ujson:dumps", "json:dumps", warn=False)
+>>> dumps = prefer("orjson:dumps", "ujson:dumps", "json:dumps", warn=False)()
 """
