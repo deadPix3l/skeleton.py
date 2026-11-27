@@ -185,6 +185,12 @@ schemas = [
   "avro-python3",
 ]
 
+search = [
+  "elasticsearch",
+  "meilisearch",
+  "whoosh",    # pure python, no server
+]
+
 #[project.scripts]
 #templatecli = "template.main:cli" # rename this
 
