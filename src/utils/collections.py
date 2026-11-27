@@ -32,3 +32,9 @@ def flatten[T](
                 yield i
     return func(_gen(lst))
 
+# since 3.7+ dict is guaranteed insertion order
+# this takes advantage of CPython loops
+# its about 2-3x faster than a `seen = set(); if i in seen` loop 
+def uniq(lst: Iterable) -> list:
+    return list(dict.fromkeys(lst))
+
