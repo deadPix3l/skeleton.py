@@ -50,6 +50,7 @@ templating = [
 sql = [
   "sqlalchemy",
   "sqlmodel",
+  "alembic", # migrations
 ]
 
 kafka = [
@@ -85,18 +86,73 @@ dev = [
   "flake8",
   "ruff", # code linter/formatter
   "wily", # maintainability metrics
-  "mypy" # type checking
+  "mypy", # type checking
+  "memray", # memory profiler
+  "scalene", # CPU + memory + GPU profiler
+  "vulture", # find dead code
 ]
 
 testing = [
+  "pytest",
+  "pytest-asyncio",
+  "pytest-cov",
   "hypothesis", # property-based testing
   "crosshair-tool", # Z3 based prover
-  "pytest-cov",
+  "freezegun", # time mocking
+  "faker",
+  "factory-boy",
 ]
 
 design-by-contract = [
   "deal",
   "icontract",
+]
+
+http = [
+  "httpx",     # sync + async, modern requests replacement
+  "aiohttp",
+  "requests",
+]
+
+serialization = [
+  "orjson",    # fast JSON
+  "msgspec",   # fast JSON + msgpack + struct validation
+  "msgpack",
+]
+
+config = [
+  "python-dotenv",
+  "pydantic-settings", # pairs with pydantic
+  "dynaconf",
+]
+
+async = [
+  "anyio",    # backend-agnostic async primitives
+  "trio",
+  "asyncer",  # anyio sugar
+]
+
+task-queue = [
+  "arq",      # async, Redis-backed
+  "celery",
+  "dramatiq",
+]
+
+logging = [
+  "loguru",
+  "structlog",
+  "opentelemetry-sdk",
+]
+
+resilience = [
+  "tenacity", # retry logic
+  "stamina",  # structured retries + jitter
+  "limits",   # rate limiting
+]
+
+functional = [
+  "toolz",    # currying, composition, etc.
+  "returns",  # Result/Maybe monads
 ]
 
 #[project.scripts]
