@@ -263,6 +263,13 @@ yaml = [
   "ruamel.yaml",  # round-trip YAML, preserves comments
 ]
 
+agents = [
+  "autogen",
+  "crewai",
+  "guidance",   # constrained LLM generation
+  "outlines",   # structured LLM output
+]
+
 #[project.scripts]
 #templatecli = "template.main:cli" # rename this
 
