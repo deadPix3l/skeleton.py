@@ -197,6 +197,11 @@ docs = [
   "sphinx",
 ]
 
+tui = [
+  "rich",
+  "textual",  # full TUI framework
+]
+
 #[project.scripts]
 #templatecli = "template.main:cli" # rename this
 
