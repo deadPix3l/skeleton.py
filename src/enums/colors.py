@@ -1,5 +1,9 @@
 from enum import StrEnum
 
+# These are only the High Contrast versions, which tend to look better (imo)
+# the normal variants are 30-37
+# theres a lot more codes: `man 4 console_codes`
+
 class ANSIColor(StrEnum):
     """ANSI color codes for terminal output."""
     RESET   = '\033[0m'
@@ -13,7 +17,7 @@ class ANSIColor(StrEnum):
     WHITE   = '\033[97m'
 
 class ANSIBackgroundColor(StrEnum):
-    """ANSI color codes for terminal output."""
+    """ANSI background color codes for terminal output."""
     RESET   = '\033[0m'
     BLACK   = '\033[100m'
     RED     = '\033[101m'
