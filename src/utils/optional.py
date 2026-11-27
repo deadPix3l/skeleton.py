@@ -12,7 +12,7 @@ def prefer(*import_strs: str, warn: bool = True):
     just build the shim, and this decorator will swap out the
     official version if available
     """
-    def decorator[T](shim: T = _no_op) -> T:
+    def decorator[T](shim: T = _no_op) -> T | Any:
         for import_str in import_strs:
             try:
                 return resolve_name(import_str)
