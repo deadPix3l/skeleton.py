@@ -173,6 +173,12 @@ caching = [
   "aiocache",
 ]
 
+datetime = [
+  "whenever", # type-safe, modern
+  "pendulum",
+  "arrow",
+]
+
 #[project.scripts]
 #templatecli = "template.main:cli" # rename this
 
