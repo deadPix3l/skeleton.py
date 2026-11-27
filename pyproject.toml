@@ -252,6 +252,12 @@ mutation-testing = [
   "cosmic-ray",
 ]
 
+openapi = [
+  "spectree",
+  "openapi-spec-validator",
+  "schemathesis",  # property-based API testing
+]
+
 #[project.scripts]
 #templatecli = "template.main:cli" # rename this
 
