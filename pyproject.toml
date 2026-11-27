@@ -274,6 +274,10 @@ debugging = [
   "icecream",   # better print debugging
   "birdseye",   # visual debugger
 ]
+hardware = [
+  "pyserial",
+  "bleak",         # Bluetooth
+]
 
 #[project.scripts]
 #templatecli = "template.main:cli" # rename this
