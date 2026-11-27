@@ -34,9 +34,11 @@ def joining(sep: str = "\n"):
     """
     converts a function that returns an iterable to return a string using str.join()
     """
-    def decorator(func: Callable[..., Iterable]) -> Callable[..., str]:
+    def decorator(func: Callable[..., Iterable[str]]) -> Callable[..., str]:
         @wraps(func)
         def wrapped(*args, **kwargs) -> str:
+            # because type-hints are not enforced, we cannot trust the user
+            # so just in case, we cast sep to string defensively
             return str(sep).join(func(*args, **kwargs))
         return wrapped
     return decorator
