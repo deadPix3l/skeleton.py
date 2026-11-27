@@ -2,7 +2,7 @@ from functools import wraps
 from collections.abc import Callable, Iterable
 
 #foss-alt: from funcy import collecting
-def collecting[T](func: Callable[..., Iterable[T]]) -> Callable[..., list[T]]:
+def collecting[**P, R](func: Callable[P, Iterable[R]]) -> Callable[P, list[R]]:
     """
     materializes a functions result into a list
     
@@ -25,7 +25,7 @@ def collecting[T](func: Callable[..., Iterable[T]]) -> Callable[..., list[T]]:
     If you do not, you WILL run out of memory and crash.
     """
     @wraps(func)
-    def wrapped(*args, **kwargs) -> list[T]:
+    def wrapped(*args, **kwargs) -> list[R]:
         return list(func(*args, **kwargs))
     return wrapped
 
@@ -34,7 +34,7 @@ def joining(sep: str = "\n"):
     """
     converts a function that returns an iterable to return a string using str.join()
     """
-    def decorator(func: Callable[..., Iterable[str]]) -> Callable[..., str]:
+    def decorator[**P](func: Callable[P, Iterable[str]]) -> Callable[P, str]:
         @wraps(func)
         def wrapped(*args, **kwargs) -> str:
             # because type-hints are not enforced, we cannot trust the user
