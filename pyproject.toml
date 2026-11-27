@@ -270,6 +270,11 @@ agents = [
   "outlines",   # structured LLM output
 ]
 
+debugging = [
+  "icecream",   # better print debugging
+  "birdseye",   # visual debugger
+]
+
 #[project.scripts]
 #templatecli = "template.main:cli" # rename this
 
