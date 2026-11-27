@@ -247,6 +247,11 @@ compression = [
   "lz4",
 ]
 
+mutation-testing = [
+  "mutmut",
+  "cosmic-ray",
+]
+
 #[project.scripts]
 #templatecli = "template.main:cli" # rename this
 
