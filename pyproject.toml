@@ -228,6 +228,11 @@ orchestration = [
   "airflow",
 ]
 
+distributed = [
+  "ray",
+  "dask",
+]
+
 #[project.scripts]
 #templatecli = "template.main:cli" # rename this
 
