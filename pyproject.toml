@@ -179,6 +179,12 @@ datetime = [
   "arrow",
 ]
 
+schemas = [
+  "protobuf",
+  "betterproto", # modern protobuf codegen
+  "avro-python3",
+]
+
 #[project.scripts]
 #templatecli = "template.main:cli" # rename this
 
