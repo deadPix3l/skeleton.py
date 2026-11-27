@@ -84,12 +84,13 @@ cli = [
 dev = [
   "black",
   "flake8",
-  "ruff", # code linter/formatter
-  "wily", # maintainability metrics
-  "mypy", # type checking
-  "memray", # memory profiler
-  "scalene", # CPU + memory + GPU profiler
-  "vulture", # find dead code
+  "ruff",      # code linter/formatter
+  "wily",      # maintainability metrics
+  "mypy",      # type checking
+  "memray",    # memory profiler
+  "scalene",   # CPU + memory + GPU profiler
+  "bandit",    # static security analysis
+  "vulture",   # dead code detection
 ]
 
 testing = [
