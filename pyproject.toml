@@ -216,6 +216,12 @@ ai = [
   "transformers",
 ]
 
+vectordb = [
+  "chromadb",
+  "qdrant-client",
+  "pinecone-client",
+]
+
 #[project.scripts]
 #templatecli = "template.main:cli" # rename this
 
