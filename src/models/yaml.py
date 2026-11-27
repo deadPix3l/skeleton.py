@@ -11,7 +11,7 @@ class YamlModel(BaseModel):
         content: Path | str,
         *,
         as_string: bool = False,
-        encoding="utf-8",
+        encoding: str = "utf-8",
         **kwargs,
     ) -> Self:
         content = str(content) if as_string else Path(content).read_text(encoding=encoding)
