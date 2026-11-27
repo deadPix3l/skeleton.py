@@ -1,0 +1,110 @@
+[project]
+name = "_skeleton.py" # Not a real project - just a TEMPLATE
+version = "0.0.1" 
+description = "useful snippets"
+readme = "README.md"
+license = "UNLICENSE"
+authors = [{name = "Your Name Here", email="you@email.com"}]
+requires-python = ">=3.12"
+# This is not a real project,
+# and it has no real dependencies
+# therefore, these will be common libraries i want to keep track of
+dependencies = []
+
+[project.optional-dependencies]
+web = [
+  "fastapi",
+  "starlette",
+  "flask",
+  "django",
+  "CherryPy",
+]
+
+web-server = [
+  "uvicorn",
+  "gunicorn",
+]
+
+web-ui = [
+  "fasthx", # UI (HTMX)
+  "htmy",
+  "minihtml",
+  "dominate",
+  "domonic",
+  "reactpy",
+]
+
+validation = [
+  "pydantic>2",
+  "attrs",
+  "cattrs",
+  "marshmallow",
+  "itsdangerous",
+]
+
+templating = [
+  "jinja2",
+  "mako",
+]
+
+sql = [
+  "sqlalchemy",
+  "sqlmodel",
+]
+
+kafka = [
+  "kafka-python",
+  "confluent-kafka",
+  "aiokafka",
+  "quixstreams",
+  "faststream",
+]
+
+data-science = [
+  "numpy",
+  "pandas",
+  "scikit-learn",
+  "polars",
+]
+
+parsing = [
+  "parsy",
+  "lark",
+  "ply",
+]
+
+cli = [
+  #"argparse", #stdlib, dont need to install
+  "fire", 
+  "click",
+  "typer",
+]
+
+dev = [
+  "black",
+  "flake8",
+  "ruff", # code linter/formatter
+  "wily", # maintainability metrics
+  "mypy" # type checking
+]
+
+testing = [
+  "hypothesis", # property-based testing
+  "crosshair-tool", # Z3 based prover
+  "pytest-cov",
+]
+
+design-by-contract = [
+  "deal",
+  "icontract",
+]
+
+#[project.scripts]
+#templatecli = "template.main:cli" # rename this
+
+#[tool.setuptools]
+#packages = ["fastapi-template"]  # rename to your package
+
+[build-system]
+requires = ["setuptools"] # Or your preferred build backend
+build-backend = "setuptools.build_meta" # Or your preferred build backend
