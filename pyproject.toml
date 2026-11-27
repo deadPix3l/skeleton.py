@@ -191,6 +191,12 @@ search = [
   "whoosh",    # pure python, no server
 ]
 
+docs = [
+  "mkdocs",
+  "mkdocs-material",
+  "sphinx",
+]
+
 #[project.scripts]
 #templatecli = "template.main:cli" # rename this
 
