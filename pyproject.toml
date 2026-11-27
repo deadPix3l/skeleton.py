@@ -222,6 +222,12 @@ vectordb = [
   "pinecone-client",
 ]
 
+orchestration = [
+  "prefect",
+  "dagster",
+  "airflow",
+]
+
 #[project.scripts]
 #templatecli = "template.main:cli" # rename this
 
