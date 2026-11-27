@@ -202,6 +202,12 @@ tui = [
   "textual",  # full TUI framework
 ]
 
+image = [
+  "pillow",
+  "opencv-python",
+  "wand",          # ImageMagick binding
+]
+
 #[project.scripts]
 #templatecli = "template.main:cli" # rename this
 
