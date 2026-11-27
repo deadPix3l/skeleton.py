@@ -208,6 +208,14 @@ image = [
   "wand",          # ImageMagick binding
 ]
 
+ai = [
+  "openai",
+  "anthropic",
+  "langchain",
+  "torch",
+  "transformers",
+]
+
 #[project.scripts]
 #templatecli = "template.main:cli" # rename this
 
