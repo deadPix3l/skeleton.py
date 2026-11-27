@@ -241,6 +241,12 @@ shell = [
   "paramiko", # SSH protocol
 ]
 
+compression = [
+  "zstandard",
+  "brotli",
+  "lz4",
+]
+
 #[project.scripts]
 #templatecli = "template.main:cli" # rename this
 
